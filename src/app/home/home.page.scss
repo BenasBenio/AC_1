@@ -25,3 +25,20 @@
 #container a {
   text-decoration: none;
 }
+
+.resultado {
+  display: flex;
+  justify-content: center;   /* Centraliza horizontalmente */
+  align-items: center;       /* Centraliza verticalmente */
+  text-align: center;
+}
+
+.resultado ion-label {
+  font-size: 50px;           /* Deixa grande */
+  font-weight: bold;
+  color: var(--ion-color-danger); /* Pode mudar a cor */
+}
+
+.campo {
+  margin-bottom: 16px; /* espaço entre os inputs */
+}
