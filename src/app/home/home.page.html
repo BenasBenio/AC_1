@@ -1,46 +1,128 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      AC 1 do Alex Monstro
-    </ion-title>
+    <ion-title> AC 1 do Alex Monstro </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-input label="Valor para Fahrenheit" labelPlacement="floating"
-  placeholder="Converter para Fahrenheit" type="number" [(ngModel)]="vC"></ion-input>
+  <!-- Primeiro Ex -->
+  <ion-input
+    class="campo"
+    label="Valor da Temperatura"
+    labelPlacement="floating"
+    placeholder="Converter a Temperatura"
+    fill="outline"
+    type="number"
+    [(ngModel)]="vT"
+  ></ion-input>
 
-  <ion-button expand="block" color="danger" fill="outline" (click)="converterC()">Converter Celsius para Fahrenheit</ion-button>
+  <ion-button
+    class="campo"
+    expand="block"
+    color="danger"
+    fill="outline"
+    (click)="converterC()"
+    >Converter Celsius para Fahrenheit</ion-button
+  >
 
-  <ion-input label="Valor para Celsius" labelPlacement="floating"
-  placeholder="Converter para Celsius" type="number" [(ngModel)]="vF"></ion-input>
+  <ion-button
+    class="campo"
+    expand="block"
+    fill="outline"
+    color="danger"
+    (click)="converterF()"
+    >Converter Fahrenheit para Celsius</ion-button
+  >
+  <!-- Segundo Ex -->
+  <ion-input
+    class="campo"
+    label="Valor do Primeiro Lado"
+    labelPlacement="floating"
+    placeholder="Coloque o Primeiro Lado"
+    fill="outline"
+    type="number"
+    [(ngModel)]="lado1"
+  ></ion-input>
 
-  <ion-button expand="block" fill="outline" color="danger" (click)="converterF()">Converter Fahrenheit para Celsius</ion-button>
+  <ion-input
+    class="campo"
+    label="Valor do Segundo Lado"
+    labelPlacement="floating"
+    placeholder="Coloque o Segundo Lado"
+    fill="outline"
+    type="number"
+    [(ngModel)]="lado2"
+  ></ion-input>
 
-  <ion-input label="Valor do Primeiro Lado" labelPlacement="floating"
-  placeholder="Coloque o Primeiro Lado" type="number" [(ngModel)]="lado1"></ion-input>
+  <ion-input
+    class="campo"
+    label="Valor do Terceiro Lado"
+    labelPlacement="floating"
+    placeholder="Coloque o Terceiro Lado"
+    fill="outline"
+    type="number"
+    [(ngModel)]="lado3"
+  ></ion-input>
 
-  <ion-input label="Valor do Segundo Lado" labelPlacement="floating"
-  placeholder="Coloque o Segundo Lado" type="number" [(ngModel)]="lado2"></ion-input>
+  <ion-button
+    class="campo"
+    expand="block"
+    fill="outline"
+    color="warning"
+    (click)="verificarLado()"
+    >Verificar o Triangulo</ion-button
+  >
+  <!-- Terceiro Ex -->
+  <ion-input
+    class="campo"
+    label="Valor da Primeira nota"
+    labelPlacement="floating"
+    placeholder="Coloque a Primeiro Lado"
+    fill="outline"
+    type="number"
+    [(ngModel)]="n1"
+  ></ion-input>
 
-  <ion-input label="Valor do Terceiro Lado" labelPlacement="floating"
-  placeholder="Coloque o Terceiro Lado" type="number" [(ngModel)]="lado3"></ion-input>
+  <ion-input
+    class="campo"
+    label="Valor da Segunda nota"
+    labelPlacement="floating"
+    placeholder="Coloque a Segunda nota"
+    fill="outline"
+    type="number"
+    [(ngModel)]="n2"
+  ></ion-input>
 
-  <ion-button expand="block" fill="outline" color="warning" (click)="verificarLado()">Converter Fahrenheit para Celsius</ion-button>
+  <ion-input
+    class="campo"
+    label="Valor da Terceira nota"
+    labelPlacement="floating"
+    placeholder="Coloque a Terceira nota"
+    fill="outline"
+    type="number"
+    [(ngModel)]="n3"
+  ></ion-input>
 
-  <ion-input label="Valor da Primeira nota" labelPlacement="floating"
-  placeholder="Coloque a Primeiro Lado" type="number" [(ngModel)]="n1"></ion-input>
+  <ion-input
+    class="campo"
+    label="Valor da Quarta nota"
+    labelPlacement="floating"
+    placeholder="Coloque a Quarta nota"
+    fill="outline"
+    type="number"
+    [(ngModel)]="n4"
+  ></ion-input>
 
-  <ion-input label="Valor da Primeiro Lado" labelPlacement="floating"
-  placeholder="Coloque a Segunda nota" type="number" [(ngModel)]="n2"></ion-input>
+  <ion-button
+    class="campo"
+    expand="block"
+    fill="outline"
+    color="success"
+    (click)="calcularM()"
+    >Calcular a Media</ion-button
+  >
 
-  <ion-input label="Valor da Primeiro Lado" labelPlacement="floating"
-  placeholder="Coloque a Terceira nota" type="number" [(ngModel)]="n3"></ion-input>
-
-  <ion-input label="Valor da Quarta nota" labelPlacement="floating"
-  placeholder="Coloque a Quarta nota" type="number" [(ngModel)]="n4"></ion-input>
-
-  <ion-button expand="block" fill="outline" color="success" (click)="calcularM()">Calcular a Media</ion-button>
-
-  <ion-label>A Resposta é {{res}}</ion-label>
+  <div class="resultado">
+    <ion-label>{{ res }}</ion-label>
+  </div>
 </ion-content>
