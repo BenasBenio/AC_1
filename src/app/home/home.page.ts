@@ -10,8 +10,7 @@ export class HomePage {
 
   constructor() {}
 
-  vC='';
-  vF='';
+  vT='';
   lado1='';
   lado2='';
   lado3='';
@@ -21,10 +20,10 @@ export class HomePage {
   n4='';
   res = '';
   converterC(){
-    this.res = ((parseFloat(this.vC)*9 + 160)/5).toFixed(1)
+    this.res = ((parseFloat(this.vT)*9 + 160)/5).toFixed(2)
   }
     converterF(){
-    this.res = ((parseFloat(this.vF) - 32) *(5/9)).toFixed(1)
+    this.res = ((parseFloat(this.vT) - 32) *(5/9)).toFixed(2)
   }
 
     verificarLado(){
@@ -40,7 +39,7 @@ calcularM() {
   const media =
     (parseFloat(this.n1) + parseFloat(this.n2) + parseFloat(this.n3) + parseFloat(this.n4)) / 4
 
-  this.res = media.toFixed(1)
+  this.res = media.toFixed(2)
 
   if (media < 3) {
     this.res = "Retido"
